@@ -1,0 +1,20 @@
+name: Export workflow to Dash0
+
+on:
+  workflow_run:
+    workflows:
+      - "Update feed"
+    types: [completed]
+
+jobs:
+  otel-export-dash0:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Export workflow to Dash0
+        uses: corentinmusard/otel-cicd-action@v2
+        with:
+          otlpEndpoint: grpc://ingress.eu-west-1.aws.dash0-dev.com:4317
+          otlpHeaders: ${{ secrets.DASH0_OTLP_HEADERS }}
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          runId: ${{ github.event.workflow_run.id }}
