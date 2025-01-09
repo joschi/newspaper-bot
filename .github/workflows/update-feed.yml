@@ -13,7 +13,7 @@ jobs:
         id: generate-key
         with:
           script: |
-            core.setOutput('bnn', new Date().valueOf())
+            core.setOutput('cache-key', new Date().valueOf())
       - name: Retrieve cache
         uses: actions/cache@v4
         with:
