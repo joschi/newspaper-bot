@@ -53,7 +53,7 @@ jobs:
           key: feed-cache-${{ steps.generate-key.outputs.cache-key }}
           restore-keys: feed-cache-
       - name: Post to Bluesky
-        uses: 'joschi/blueskyfeedbot@v0.0.2'
+        uses: 'joschi/blueskyfeedbot@v0.0.3'
         with:
           rss-feed: 'https://bnn.de/feed'
           dry-run: false
