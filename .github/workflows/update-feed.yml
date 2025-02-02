@@ -21,7 +21,7 @@ jobs:
           key: feed-cache-${{ steps.generate-key.outputs.cache-key }}
           restore-keys: feed-cache-
       - name: GitHub
-        uses: 'joschi/mastofeedbot@v0.1.7'
+        uses: 'joschi/mastofeedbot@v0.2.0'
         with:
           rss-feed: 'https://bnn.de/feed'
           # Visibility of the posted status (public | unlisted | private | direct)
