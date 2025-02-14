@@ -18,8 +18,10 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/mastofeedbot
-          key: feed-cache-${{ steps.generate-key.outputs.cache-key }}
-          restore-keys: feed-cache-
+          key: bnn-mastodon-feed-cache-${{ steps.generate-key.outputs.cache-key }}
+          restore-keys: |
+            bnn-mastodon-feed-cache-
+            feed-cache-
       - name: GitHub
         uses: 'joschi/mastofeedbot@v0.2.0'
         with:
@@ -50,8 +52,10 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/blueskyfeedbot
-          key: feed-cache-${{ steps.generate-key.outputs.cache-key }}
-          restore-keys: feed-cache-
+          key: bnn-bluesky-feed-cache-${{ steps.generate-key.outputs.cache-key }}
+          restore-keys: |
+            bnn-bluesky-feed-cache-
+            feed-cache-
       - name: Post to Bluesky
         uses: 'joschi/blueskyfeedbot@v0.0.3'
         with:
