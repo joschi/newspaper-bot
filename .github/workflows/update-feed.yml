@@ -57,7 +57,7 @@ jobs:
             bnn-bluesky-feed-cache-
             feed-cache-
       - name: Post to Bluesky
-        uses: 'joschi/blueskyfeedbot@v0.0.3'
+        uses: 'joschi/blueskyfeedbot@v0.0.4'
         with:
           rss-feed: 'https://bnn.de/feed'
           dry-run: false
