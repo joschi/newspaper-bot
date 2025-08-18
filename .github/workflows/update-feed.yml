@@ -16,6 +16,10 @@ jobs:
             rss-feed: "https://bnn.de/feed"
             api-endpoint: "https://sueden.social"
             token-secret: MASTODON_ACCESS_TOKEN
+          - name: "bnn_karlsruhe"
+            rss-feed: "https://bnn.de/karlsruhe/feed"
+            api-endpoint: "https://sueden.social"
+            token-secret: MASTODON_BNN_KARLSRUHE_TOKEN
     steps:
       - name: Generate cache key
         uses: actions/github-script@v7
