@@ -35,7 +35,7 @@ jobs:
           restore-keys: |
             mastodon-${{ matrix.name }}-
       - name: GitHub
-        uses: 'joschi/mastofeedbot@v0.2.0'
+        uses: 'joschi/mastofeedbot@v0.3.0'
         with:
           rss-feed: ${{ matrix.rss-feed }}
           # Visibility of the posted status (public | unlisted | private | direct)
