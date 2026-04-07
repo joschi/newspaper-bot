@@ -77,7 +77,7 @@ jobs:
           restore-keys: |
             bluesky-${{ matrix.name }}
       - name: Post to Bluesky
-        uses: 'joschi/blueskyfeedbot@v0.0.6'
+        uses: 'joschi/blueskyfeedbot@v0.0.7'
         with:
           rss-feed: ${{ matrix.rss-feed }}
           dry-run: false
